@@ -1,6 +1,6 @@
 var app = app || {};
 
-app.DialogModel = function () {
+app.AccordionModel = function () {
     "use strict";
 
     if (!(this instanceof app.DialogModel)) {

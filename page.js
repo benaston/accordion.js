@@ -1,3 +1,3 @@
 jQuery(document).ready(function () {
-    new app.DialogView(new app.DialogModel());
+    new app.AccordionView(new app.AccordionModel());
 }); 
