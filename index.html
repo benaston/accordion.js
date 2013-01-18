@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<!-- Copyright Ben Aston 2013. All rights reserved. -->
+	<link href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.2.2/css/bootstrap-combined.min.css" rel="stylesheet">	
+	<link href="./style.css" rel="stylesheet">	
+	<noscript>
+		<style>
+			#example{display:none !important;}
+			#no-script{display:block !important;}
+		</style>
+	</noscript>	
+</head>
+<body class="textured-with-logo">
+	<article class="wrapper-accordion" data-state=""
+			 data-strings='{"tab-title-1":"Search", "tab-title-2":"My Account"}'>
+		<ul class="reset accordion">
+			<li id="searchTab" class="tab matt ">
+				<a class="tab-header matt" href="#">
+					<div class="tabIcon">
+						<span class="pictos empirical">s</span>
+					</div>
+					<div class="title">
+						Search
+					</div>
+				</a>
+				<div class="search-form-placeholder"></div>
+				<div class="tabContents" style="height: 368px;">	
+					<aside id="emptyMessageSavedSearches">saved searches are shown here</aside>
+					<!-- avoid saved searches as a feature to reduce scope!! -->
+					<h1>Actionable Candidates</h1>
+					<ul id="savedSearchAccordion" class="reset list two-col bookmarks">
+						<li class="bookmark ">
+							<div class="imageSmall sheen"></div>
+						</li>
+					</ul>
+					<h1>Interviewed</h1>
+					<ul id="savedSearchAccordion" class="reset list two-col bookmarks">
+						<li class="bookmark ">
+							<div class="imageSmall sheen"></div>
+						</li>
+					</ul>
+				</div>
+			</li>
+			<li id="accountTab" class="tab matt" title="My Account">
+				<a class="tab-header matt" href="">
+					<div class="tabIcon"> 
+						<span class="pictos empirical">U</span>
+					</div>
+					<div class="title">
+						My Account
+					</div>
+				</a>
+				<div class="menu-placeholder"></div>				
+				<div class="tabContents" style="height: 0px;">					
+					<aside id="emptyMessageMyItems">My  job adverts are shown here</aside>
+					<ul id="myItemAccordion" class="reset accordion innerAccordion">
+
+						<!-- my item tabs go here -->
+
+					</ul>
+				</div>
+			</li>
+		</ul>
+	</article>
+	
+	<div id="templates" style="display:none;">
+		<div>
+			<a class="shiny helpButton dn" style="top: 373px; left: 144px;">
+				<span class="helpButtonContent">?</span>
+				<span class="ping threeDElement"></span>
+				<span class="ping threeDElement"></span>
+				<span class="ping threeDElement"></span>
+			</a>
+		</div>
+		<div id="menu-account-tab" class="template">
+			<input id="menuMA" class="dn menu" type="checkbox">
+				<label class="menuLabel" for="menuMA" onclick="">
+					<a class="menuLink pictos"></a>
+				</label>
+				<ul class="menuItems">
+					<li class="menuItem">
+						<label for="menuMA">
+							<a id="newOpportunityButton" class="menuItemLink">
+								<span class="pictos menuItemIcon">p</span>
+								<strong id="newItemLink" class="menuItemLabel matt">New job advert</strong>
+							</a>
+						</label>
+					</li>
+					<li class="menuItem">
+						<label for="menuMA">
+							<a class="menuItemLink">
+								<span class="pictos menuItemIcon">t</span>
+								<strong class="menuItemLabel matt">Activity Log</strong>
+							</a>
+						</label>
+					</li>
+					<li class="menuItem">
+						<label for="menuMA">
+							<a id="logOutButton" class="menuItemLink">
+								<span class="pictos menuItemIcon">K</span>
+								<strong class="menuItemLabel matt">Log Out</strong>
+							</a>
+						</label>
+					</li>
+				</ul>
+		</div>
+		<div id="search-form-contractor" class="template">
+			<!-- Placeholder to be updated dynamically to something like new keyword search... -->
+				<input id="searchField" name="searchField" class="searchField" pattern="[0-9]{13,16}" required="required" placeholder="Search by skill..." tabindex="1" autocorrect="off" autocapitalize="none" type="text">
+				<button class="searchButton shiny2D primarySearchButton" tabindex="2">
+					<span class="pictos searchButtonIcon"><span>s</span></span>
+				</button>
+				<div id="searchFilterTrayPrimary" class="filterTray noFlicker">
+				<fieldset class="ov filterFieldset">
+					<legend class="hide"></legend>
+					<ul class="filters filterCol ov">
+						<li>
+					<input class="menuSwitch" id="filterRateMenuSwitch" tabindex="1" type="checkbox">
+					<label for="filterRateMenuSwitch" class="menuSwitchLabel">
+						<a class="filterButton shiny">
+							<span class="filterButtonTitle">rate</span>
+							<span class="filterButtonValue"> Any</span>
+						</a>
+					</label>
+					<div class="filterDialog filterDialogRate">
+						<p>
+							<label for="rateBoundUpper" class="hide">rate:</label>
+							<select id="rateBoundUpper" name="rateBoundUpper" tabindex="1">
+								<option value="0" selected="selected">Any</option>
+								<option value="300">upto 300 GBP/day</option>
+								<option value="400">upto 400 GBP/day</option>
+								<option value="500">upto 500 GBP/day</option>
+								<option value="600">upto 600 GBP/day</option>
+							</select>
+						</p>
+					</div>
+				</li>
+				<li>
+					<input class="menuSwitch" id="filterWhenMenuSwitch" tabindex="1" type="checkbox">
+					<label id="labelForFilterWhenMenuSwitch" for="filterWhenMenuSwitch" class="menuSwitchLabel">
+						<a class="filterButton shiny">
+							<span class="filterButtonTitle">when</span>
+							<span class="filterButtonValue">Now</span>
+							<span class="filterButtonValue">Onwards</span>
+						</a>
+					</label>
+					<div class="filterDialog filterDialogWhen">
+						<p>
+							<label>Must be available from<br><span class="usage">(e.g. now, mar, jul 2012)</span></label>
+							<input class="from" placeholder="e.g. now, mar, jul 2012" tabindex="1" type="text" value="Now">
+						</p>
+						<p>
+							<label>Must be available to (approx.)<br><span class="usage">(e.g. now, mar, jul 2012)</span></label>
+							<input class="to" placeholder="e.g. now, mar, jul 2012" tabindex="1" type="text" value="Onwards">
+						</p>
+					</div>
+				</li>
+				<li>
+					<input class="menuSwitch" id="filterWhereMenuSwitch" tabindex="1" type="checkbox">
+					<label for="filterWhereMenuSwitch" class="menuSwitchLabel">
+						<a class="filterButton shiny">
+							<span class="filterButtonTitle">where</span>
+							<span class="filterButtonValue">UK</span>
+							<span class="pictos isRemoteIcon"></span>
+						</a>
+					</label>
+					<div class="filterDialog  filterDialogWhere">
+						<p>
+							<a class="guessLocationLink" href="#">Guess current location</a>
+							<input class="location" placeholder="UK town, city or postcode..." tabindex="1" type="text" value="UK">
+						</p>
+						<p>
+							<input id="isRemote" class="isRemote" name="isRemote" value="false" tabindex="1" type="checkbox">
+							<label class="isRemoteLabel" for="isRemote">Remote working is possible</label>
+						</p>
+					</div>
+				</li>
+				<li>
+					<input class="menuSwitch" id="filterRoleMenuSwitch" tabindex="1" type="checkbox">
+					<label for="filterRoleMenuSwitch" class="menuSwitchLabel">
+						<a class="filterButton shiny">
+							<span class="filterButtonTitle">role</span>
+							<span class="filterButtonValue">Any</span>
+						</a>
+					</label>
+					<div class="filterDialog filterDialogRole">
+						<p>
+							<select class="role" tabindex="1">
+								<optgroup label="Most Frequently Used">
+									<option selected="selected">Any</option>
+									<option>Developer</option>
+									<option>Tester</option>
+								</optgroup>
+								<optgroup label="All Roles">
+									<option>Architect</option>
+									<option>Build Manager</option>
+									<option>DBA</option>
+									<option>Developer</option>
+									<option>Director/CTO/CIO</option>
+									<option>Process Expert</option>
+									<option>Security Expert</option>
+									<option>Tester</option>
+								</optgroup>
+							</select>
+						</p>
+					</div>
+				</li>
+				<li>
+					<input class="menuSwitch" id="filterSampleCodeMenuSwitch" tabindex="1" type="checkbox">
+					<label for="filterSampleCodeMenuSwitch" class="menuSwitchLabel">
+						<a class="filterButton shiny">
+							<span class="filterButtonTitle">Sample Code?</span>
+							<span class="filterButtonValue">Don't Mind</span>
+						</a>
+					</label>
+					<div class="filterDialog filterDialogCode">
+						<p>
+							<input id="sampleCode" class="sampleCode" name="sampleCode" tabindex="1" type="checkbox">
+							<label class="sampleCodeLabel" for="sampleCode">Has Sample</label>
+						</p>
+					</div>
+				</li>
+				<li>
+					<input class="menuSwitch" id="filterClearanceMenuSwitch" tabindex="1" type="checkbox">
+					<label for="filterClearanceMenuSwitch" class="menuSwitchLabel">
+						<a class="filterButton shiny">
+							<span class="filterButtonTitle">clearance</span>
+							<span class="filterButtonValue">Any</span>
+						</a>
+					</label>
+					<div class="filterDialog  filterDialogClearance">
+						<p>
+							<select class="clearance" tabindex="1">
+								<option selected="selected">Any clearance</option>
+								<option>BC</option>
+								<option>SC</option>
+								<option>DV</option>
+								<option>CRB</option>
+								<option>AT</option>
+							</select>
+						</p>
+					</div>
+				</li>
+				<li>
+					<a class="resetFilters button shiny" tabindex="2">
+						<span style="position: relative; top: 0pt;">
+							<span class="pictos">1</span>
+							Reset filters
+						</span>
+					</a>
+				</li>
+			</ul>
+			</fieldset>
+			</div> 
+			<div id="dialogServiceSearchFilterTrayPrimary">
+
+				<!-- filter tray dialogs go here -->
+
+			</div>
+		</div>
+	</id>
+	<div class="vertical-line"></div>
+	<div class="horizontal-line"></div>
+	<noscript>
+		<div id="no-script">
+			<h1>This website requires <em>JavaScript</em>.</h1>
+		</div>
+	</noscript>
+	<script src="http://code.jquery.com/jquery-1.7.2.js"></script>
+	<script src="./tiny-pub-sub.js"></script>
+	<script src="./model.js"></script>
+	<script src="./view.js"></script>
+	<script src="./page.js"></script>
+</body>
+

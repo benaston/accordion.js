@@ -1,0 +1,461 @@
+.tab.expanded > .tab-header > .notify {
+visibility: hidden;
+}
+.tab .tab > .tab-header > .notify {
+visibility: hidden;
+}
+.tab.expanded .tab > .tab-header > .notify {
+visibility: visible;
+}
+.tab > .tab-header > .notify {
+left: 25px;
+}
+.reset {
+padding: 0;
+margin: 0;
+}
+.accordion > .tab {
+oveflow: hidden;
+}
+#searchTab > .searchField {
+position: absolute;
+left: 0;
+top: 0;
+visibility: hidden;
+font-family: Muli;
+}
+#searchTab.expanded > .searchField {
+visibility: visible;
+box-shadow: -1px 1px 1px 0 rgba(0,0,0,0.2) inset;
+}
+#searchTab.expanded .tabIcon {
+visibility: hidden;
+}
+#searchTab .tabIcon {
+visibility: visible;
+}
+#searchTab {
+margin-top: 0 !important;
+}
+.tab > a,#savedSearchAccordion > .tab > a {
+display: block;
+position: relative;
+}
+.tab.expanded .tab.expanded .tabContents {
+overflow:auto;
+-webkit-transition:height .5s ease-in-out;
+-moz-transition: height .5s ease-in-out;
+}
+.tab.expanded > .tabContents > .helpButton {
+visibility: visible;
+}
+.tab.expanded > .menuLabel > .menuLink {
+display: block;
+}
+.tab.expanded > .menuItems {
+display: block;
+}
+.tab .title {
+margin-left: 54px;
+padding-top: 0;
+color: #EEEEEE;
+text-shadow: 0 -1px 1px rgba(0,0,0,0.5);
+font-family: Muli;
+font-weight: normal;
+font-size: 1em;
+}
+.tab:not(:first-child) {
+margin-top: 0px;
+}
+.tab {
+margin: auto;
+position: relative;
+margin-top: 2px;
+margin-bottom: 2px;
+}
+.tab {
+position:relative;
+-webkit-transform: translate3d(0,0,0);/*attempt to solve reflow issue*/
+}
+.tab .tab-header {
+height: 44px;
+position: relative;
+z-index: 3;
+cursor: pointer;
+}
+.tab a.tab-header {
+display: block;
+padding-left: 2px;
+-webkit-transition: padding-left 0.1s ease-out;
+-moz-transition: padding-left 0.1s ease-out;
+}
+.tab a.tab-header:hover {
+text-decoration: none !important;
+padding-left: 7px;
+}
+.innerAccordion .tab-header {
+border-radius: 5px;
+}
+.tab.expanded div.accordion-container > ul > .tab.expanded > div.tabContents {
+height: 100%;/*455px;*/
+}
+.tab.expanded div.accordion-container > ul > .tab.expanded.filterTrayVisible > div.tabContents {
+height: 300px;
+}
+#savedSearchAccordion > .tab.filterTrayVisible .searchField {
+position: relative !important;
+width: 251px !important;
+}
+.innerAccordion > .tab .title {
+margin-left: 18px;
+}
+#savedSearchAccordion > .tab {
+padding: 0;
+}
+#savedSearchAccordion > .tab ul.list > li,#myItemAccordion > .tab ul.list > li {
+overflow: visible;
+margin-bottom: 5px;
+margin-top:0;
+position: relative;
+}
+.matt {
+box-shadow:0 2px 2px rgba(0,0,0,0.5),0 1px rgba(255,255,255,0.3) inset,0 10px 20px rgba(255,255,255,0.25) inset !important;
+}
+ul#savedSearchAccordion li>.tab-header strong,
+ul#myItemAccordion li>.tab-header strong,
+.panelHeader > strong {
+color: #EEEEEE;
+}
+
+.tab-header,.panelHeader {
+outline:none;
+box-shadow: 0 2px 2px rgba(0,0,0,0.5),0 1px rgba(255,255,255,0.3) inset,0 10px 20px rgba(255,255,255,0.25) inset !important;
+}
+.tabIcon {
+position: absolute;
+left:0;
+display: inline-block;
+width: 44px;
+height: 44px;
+margin: 0;
+border: 0;
+}
+.tabIcon::after {
+position: absolute;
+content: ' ';
+width: 44px;
+height: 44px;
+top: 0;
+left: 0;
+}
+@font-face {
+font-family: 'Museo Sans 300';
+src: local('?'),url('./fonts/museo-sans-300.woff') format('woff');
+font-weight:normal;
+font-style: normal;
+}
+@font-face {
+font-family: 'Museo Sans 500';
+src: local('?'),url('./fonts/museoSans-500.woff') format('woff');
+font-weight:normal;
+font-style: normal;
+}
+@font-face {
+font-family: 'Museo Sans 900';
+src: local('?'),url('./fonts/museoSans-900.woff') format('woff');
+font-weight:normal;
+font-style: normal;
+}
+@font-face {
+font-family: 'Museo Sans 100';
+src: local('?'),url('./fonts/museoSans-100.woff') format('woff');
+font-weight:normal;
+font-style: normal;
+}
+@font-face {
+font-family: 'Pictos';
+src:local('?'),url('./fonts/pictosWeb.woff') format('woff');
+font-weight:normal;
+font-style: normal;
+}
+.pictos {
+font-weight: normal !important;
+font-style: normal;
+line-height: normal;
+font-family: 'Pictos',sans-serif !important;
+text-transform: none !important;
+}
+.tab-header  {
+font-family: 'Museo Sans 300' !important;
+font-weight: normal !important;
+font-size: 1.1em !important;
+}
+#emptyMessageSavedSearches, 
+#emptyMessageMyItems, 
+#emptyMessageSearchResults {
+color: gray;
+text-shadow: 0 -1px 1px rgba(0, 0, 0, 0.5);
+position: absolute;
+margin: auto;
+top: 30px;
+left: 26px;
+cursor: default;
+}
+ul.two-col,
+ul.three-col {
+overflow: hidden;
+}
+ul.two-col > li {
+float: left;
+width: 49%;
+}
+ul#searchResults.two-col > li {
+float: left;
+width: 50%;
+}
+.sheen:after {
+background: -webkit-gradient(linear,left top,left bottom,color-stop(0%,rgba(255,255,255,.4)),color-stop(100%,rgba(255,255,255,.1)));
+background: -moz-linear-gradient(top,rgba(255,255,255,.4) 0%,rgba(255,255,255,.1) 100%);
+background-repeat: no-repeat;
+background-position: 0 0;
+background-size: auto auto;
+}
+.empirical {
+color:white; 
+line-height:1.3em; 
+position:relative; 
+left:6px; 
+top:7px; 
+font-size:2em;
+}
+.imageSmall {
+ width: 95px;
+ height: 60px;
+ position: relative;
+ background-size: cover;
+ background-repeat: no-repeat;
+ background-position: 0 0;
+ border: none;
+ border-radius: 3px;
+ margin: auto !important;
+ margin-left: -7px;
+ display: block; /*needed?*/ 
+ box-shadow: 0 2px 6px rgba(0,0,0,0.5);
+ }
+ .image::after, 
+ .imageSmall:after,
+ .imageDetails::after{
+ position: absolute;
+ top: 0;
+ left: 0;
+ width: 100%;
+ height: 100%;
+ background-size: cover;
+ content:'';
+ border-radius: 5px;
+ }
+ .image.active,
+ .imageSmall.active {
+ box-shadow:0 0px 16px 2px rgba(255,255,255,1) inset,0 2px 2px rgba(0,0,0,0.5),0 1px rgba(255,255,255,0.3) inset,0 10px 20px rgba(255,255,255,0.25) inset !important;
+ }
+.wrapper-accordion {
+	width: 320px;
+}
+.textured-with-logo {
+background-image: url(./images/bg-svg.svg), url(./images/bg-denim.png);
+background-color: rgba(21,21,21,1);
+background-size: 2000px auto, auto auto;
+background-repeat: no-repeat, repeat;
+background-position: 0 0;
+background-attachment: fixed;
+}
+ .tab .title, h1 {
+font-family: 'Museo Sans 300' !important;
+font-weight: normal !important;
+font-size: 1.1em !important;
+color: white;
+text-shadow: 0 -1px 1px rgba(0,0,0,0.5);
+}
+
+.tab-header > .title {
+top: 13px;
+position: relative;
+left: 0;
+font-weight: normal;
+}
+.stripes {
+height: 250px;
+width: 375px;
+float: left;
+margin: 10px;
+-webkit-background-size: 50px 50px;
+background-size: 50px 50px;
+-webkit-box-shadow: 1px 1px 8px gray;
+box-shadow: 1px 1px 8px gray;
+}
+
+ul#savedSearchAccordion > li > a,
+ul#myItemAccordion > li > a {
+margin: 5px 0 0 0;
+font-weight: bold;
+text-decoration: none;
+display: block;
+}
+ul#savedSearchAccordion div.content {
+margin-bottom: 10px;
+position: absolute;
+visibility: hidden;
+}
+
+.tabContents > strong {
+color: white;
+text-shadow: 0 -1px 1px rgba(0,0,0,0.5);
+margin-top: 10px;
+display: inline-block;
+text-align: center;
+text-indent: 5px;
+}
+#savedSearchAccordion > .tab.filterTrayVisible .filterTray {
+height: 198px;
+top: 0;
+overflow: hidden;
+}
+
+.myItem h3 {
+margin-top: 0;
+}
+
+div.notify {
+position: absolute;
+left: -5px;
+top: -2px;
+font-weight: bold;
+color: white;
+margin: 0;
+text-indent: 8px;
+line-height: 2.0em;
+overflow: hidden;
+width: 25px;
+height: 25px;
+-moz-box-shadow: 0 0px 1px rgba(0,0,0,.9);
+-webkit-box-shadow: 0 0px 1px rgba(0,0,0,.9);
+-moz-border-radius: 15px;
+-webkit-border-radius: 15px;
+border-radius: 15px;
+background-image: -webkit-linear-gradient(rgba(350,50,50,1),rgba(100,50,50,1));
+background-image: -moz-linear-gradient(rgba(350,50,50,1),rgba(100,50,50,1));
+}
+.myItem div.notify {
+margin-top: -20px;
+margin-left: -7px;
+}
+
+
+
+ul#savedSearchAccordion > li,
+ul#myItemAccordion > li {
+width: 95%;
+}
+ul#savedSearchAccordion {
+margin-bottom: 5px;
+}
+
+.innerAccordion > .tab:first-child {
+margin-top: 3px;
+}
+ul#savedSearchAccordion ul.list {
+width: 100%;
+overflow: auto;
+}
+
+.filterTray fieldset {
+width: 100%;
+/*height: 100%;*//*uncomment if problems in gecko*//*attempt to correct brower rendering inconsistency*/
+}
+.tabContents {
+margin-top: 0px;
+}
+div.accordion-container {
+width: 100%;
+margin-left: 0;
+margin-right: 0;
+}
+
+
+.tabContents {
+position:relative;
+overflow:hidden;
+width: 100%;
+-webkit-transition: height .5s ease-in-out;
+-moz-transition: height .5s ease-in-out;
+-webkit-mask: -webkit-gradient(linear,0% 100%,0% 0%,color-stop(0.95,black),to(transparent)) 
+              -webkit-gradient(linear,0% 0%,0% 100%,color-stop(0.95,black),to(transparent));
+}
+
+.available {
+text-shadow: 0 0 2px green,0 0 4px white,0 -1px 1px rgba(0,0,0,0.5) !important;
+}
+
+.temporarilyHiddenMenu {
+display:none !important;
+}
+
+.wrapper .spinner {
+visibility: hidden;
+	opacity: 0;
+	-webkit-transition: opacity .5s linear 0s, visibility 0s linear .5s;
+}
+
+.wrapper[data-state="waiting"] .spinner {
+	visibility: visible;
+	opacity: 1;
+	-webkit-transition: opacity .5s linear 0s, visibility 0 linear 0;
+}
+
+.vertical-line {
+	position: fixed;
+	left: 50%;
+	top:0;
+	margin: auto;
+	width: 1px;
+	height: 100%;
+	background-color: rgba(0,0,0,0.4);
+	box-shadow: 0 0 0 4px rgba(0,0,0,0.4);
+	border: none;
+}
+
+.horizontal-line {
+	position: fixed;
+	left: 0;
+	top: 50%;
+	margin: auto;
+	width: 100%;
+	height: 1px;
+	background-color: rgba(0,0,0,0.4);
+	box-shadow: 0 0 0 4px rgba(0,0,0,0.4);
+	border: none;
+}
+
+.spinner {	
+	display:inline-block;
+	width:25px;
+	height:25px;
+	position:absolute;
+	right: 27px;
+	top: 20px;
+	border: 2px dashed rgba(0,0,0,.5);
+	border-radius: 20px;
+	-webkit-animation-name: rotate !important;
+	-webkit-animation-duration: 1600ms !important;
+	-webkit-animation-iteration-count: infinite !important;
+	-webkit-animation-timing-function: linear !important;
+}
+
+@-webkit-keyframes rotate {
+    0% {
+        -webkit-transform: rotate(0deg) scale(1);
+    }
+    100% {
+         -webkit-transform: rotate(360deg) scale(1);
+    }
+}
